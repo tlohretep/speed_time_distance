@@ -1,16 +1,4 @@
-Y = raw_input("Do you want to work out your distance Y/N")
-if Y in ("y", "Y"):
-    distance()
-elif Y in ("n","N"):
-    N = raw_input ( "Do you want to work out the speed you would have to travel at in order to go a distance within a certain time? y/n")
-    if N in ("y", "Y"):
-        Speed()
-    else: 
-        print "you dont need me then" 
-else: 
-        print "you dont need me then"
-
-def distance():
+def dist():
     speed = raw_input ("Please enter the speed in miles per hour")
     time = raw_input ("Please enter the time you were travelling in minuets")
     min_speed = float(speed)/(60.00)
@@ -21,4 +9,16 @@ def speed():
     time = raw_input ("Please enter the time you would like to travel for (in minuets)?")
     _time = raw_input ("Please enter the distance you will travel in miles?")
     total = (int(time)*60) / int(_time)
-    print "you would have to travel at %s mph to cover the distance entered in the time given" % total   
+    print "you would have to travel at %s mph to cover the distance entered in the time given" % total  
+
+Y = raw_input("Do you want to work out your distance Y/N")
+if Y in ("y", "Y"):
+    dist()
+elif Y in ("n","N"):
+    N = raw_input ( "Do you want to work out the speed you would have to travel at in order to go a distance within a certain time? y/n")
+    if N in ("y", "Y"):
+        speed()
+    else: 
+        print "you dont need me then" 
+else: 
+        print "you dont need me then"
