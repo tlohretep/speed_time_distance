@@ -1,0 +1,28 @@
+Python 2.7.6 (default, Nov 10 2013, 19:24:18) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> 
+def distance():
+    speed = raw_input ("Please enter the speed in miles per hour")
+    time = raw_input ("Please enter the time you were travelling in minuets")
+    min_speed = float(speed)/(60.00)
+    total = min_speed * int(time)
+    print "You travelled %s miles, providing your speed did not vary!" % str(round(total, 2))
+
+def speed():
+    time = raw_input ("Please enter the time you would like to travel for (in minuets)?")
+    _time = raw_input ("Please enter the distance you will travel in miles?")
+    total = (int(time)*60) / int(_time)
+    print "you would have to travel at %s mph to cover the distance entered in the time given" % total   
+Y = raw_input("Do you want to work out your distance Y/N")
+if Y in ("y", "Y"):
+    distance()
+elif Y in ("n","N"):
+    N = raw_input ( "Do you want to work out the speed you would have to travel at in order to go a distance within a certain time? y/n")
+    if N in ("y", "Y"):
+        Speed()
+    else: 
+        print "you dont need me then" 
+        break
+else: 
+        print "you dont need me then" 
+        break
