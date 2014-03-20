@@ -6,9 +6,9 @@ def dist():
     print "You travelled %s miles, providing your speed did not vary!" % str(round(total, 2))
 
 def speed():
-    time = raw_input ("Please enter the time you would like to travel for (in minuets)?")
+    time = raw_input ("Please enter the time you would like to travel for (in minutes)?")
     _time = raw_input ("Please enter the distance you will travel in miles?")
-    total = (int(time)*60) / int(_time)
+    total = int(_time)/(int(time)*60)
     print "you would have to travel at %s mph to cover the distance entered in the time given" % total  
 
 Y = raw_input("Do you want to work out your distance Y/N")
